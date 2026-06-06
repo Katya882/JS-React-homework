@@ -194,7 +194,7 @@ let winter_sports = sports.slice(0,5);
 winter_sports.splice(2, 1);
 console.log(winter_sports);
 
-let summer_sports = sports.slice(5,11);
+let summer_sports = sports.slice(5);
 summer_sports.splice(2, 2);
 console.log(summer_sports);
 
