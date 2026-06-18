@@ -76,3 +76,40 @@ console.log(numberPhone);
 
 console.log("Total sum of all user balances:");
 console.log("$" + totalBalance.toFixed(2));
+
+
+const obj = {
+    x: 10,
+    y: 20,
+    inner: {
+        x: 20,
+        z: 30
+    },
+    foo2: {
+        k: 23,
+        p: 13
+    }
+};
+
+function convert(obj){
+    const result = {};
+
+    function extract(currentObj){
+        Object.entries(obj).forEach(function ([key,value]){
+
+            if (typeof value === "object" && value !== null){
+                extract(value);
+            }else {
+                result[key] = value;
+            }
+        })
+    }
+
+    extract(obj);
+
+    return result;
+}
+
+
+
+
